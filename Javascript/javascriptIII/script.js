@@ -65,89 +65,116 @@ if (formulario1)
   })
 
 function validaCampo(elemento) {
-  elemento.addEventListener('focusout', function (event) {
-    event.preventDefault()
-
-    if (this.value == '') {
-      document.querySelector('.mensagem').innerHTML =
-        'verifique o preenchimento dos campos em vermelho'
-      this.classList.add('erro')
-      this.parentNode.classList.add('erro')
-      return false
-    } else {
-      document.querySelector('.mensagem').innerHTML = ''
-      this.classList.remove('erro')
-      this.parentNode.classList.remove('erro')
-    }
-  })
+  if (elemento.value.length < 2) {
+    document.querySelector('.mensagem').innerHTML =
+      'Verifique tamanho do nome ou cidade '
+    this.classList.add('erro')
+    this.parentNode.classList.add('erro')
+    return false
+  } else {
+    document.querySelector('.mensagem').innerHTML = ''
+    elemento.classList.remove('erro')
+    elemento.parentNode.classList.remove('erro')
+    return true
+  }
 }
 
 function validaCampoNumerico(elemento) {
-  elemento.addEventListener('focusout', function (event) {
-    event.preventDefault()
+  let numero = elemento.value
 
-    let numero = this.value.match(/^[\d]5-[\d]3/)
-      ? this.value.replace(/-/, '')
-      : this.value
-
-    if (numero != '' && numero.match(/[0-9]*/) && numero >= 0 && numero <= 10) {
-      document.querySelector('.mensagem').innerHTML = ''
-      this.classList.remove('erro')
-      this.parentNode.classList.remove('erro')
-    } else {
-      document.querySelector('.mensagem').innerHTML =
-        'verifique o preenchimento dos campos em destaque'
-      this.classList.add('erro')
-      this.parentNode.classList.add('erro')
-      return false
-    }
-  })
+  console.log(numero)
+  if (
+    numero != '' &&
+    numero.match(/[0-9]*/) &&
+    numero.length >= 0 &&
+    numero.length <= 10
+  ) {
+    document.querySelector('.mensagem').innerHTML = ''
+    elemento.classList.remove('erro')
+    elemento.parentNode.classList.remove('erro')
+    return true
+  } else {
+    document.querySelector('.mensagem').innerHTML =
+      'verifique se o numero esta no formato ex: 991534632'
+    elemento.classList.add('erro')
+    elemento.parentNode.classList.add('erro')
+    return false
+  }
 }
 
 function validaEmail(elemento) {
-  elemento.addEventListener('focusout', function (event) {
-    event.preventDefault()
-
-    const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i
-    if (this.value.match(emailValido)) {
-      document.querySelector('.mensagem').innerHTML = ''
-      this.classList.remove('erro')
-      this.parentNode.classList.remove('erro')
-    } else {
-      document.querySelector('.mensagem').innerHTML =
-        'verifique o preenchimento dos campos em destaque'
-      this.classList.add('erro')
-      this.parentNode.classList.add('erro')
-      return false
-    }
-  })
+  const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i
+  if (elemento.value.match(emailValido)) {
+    document.querySelector('.mensagem').innerHTML = ''
+    elemento.classList.remove('erro')
+    elemento.parentNode.classList.remove('erro')
+    return true
+  } else {
+    document.querySelector('.mensagem').innerHTML =
+      'Formato do email deve ser email@example.com; '
+    elemento.classList.add('erro')
+    elemento.parentNode.classList.add('erro')
+    return false
+  }
 }
 
 function validaUF(elemento) {
-  elemento.addEventListener('focusout', function (event) {
-    event.preventDefault()
-
-    const UFvalido = /^[a-zA-Z]/i
-    if (this.value.match(UFvalido) && this.value.length == 2) {
-      document.querySelector('.mensagem').innerHTML = ''
-      this.classList.remove('erro')
-      this.parentNode.classList.remove('erro')
-    } else {
-      document.querySelector('.mensagem').innerHTML =
-        'verifique o preenchimento dos campos em destaque'
-      this.classList.add('erro')
-      this.parentNode.classList.add('erro')
-      return false
-    }
-  })
+  const UFvalido = /^[a-zA-Z]/i
+  if (elemento.value.match(UFvalido) && elemento.value.length == 2) {
+    document.querySelector('.mensagem').innerHTML = ''
+    elemento.classList.remove('erro')
+    elemento.parentNode.classList.remove('erro')
+    return true
+  } else {
+    document.querySelector('.mensagem').innerHTML = 'Exemplo do campo UF: AM'
+    elemento.classList.add('erro')
+    elemento.parentNode.classList.add('erro')
+    return false
+  }
 }
 
+const formulario = document.getElementById('formulario-02')
+
+let nome = document.querySelector('.nome')
+let cidade = document.querySelector('.cidade')
+let telefone = document.querySelector('.telefone')
+let cep = document.querySelector('.numerico')
+let email = document.querySelector('.email')
+let uf = document.querySelector('.uf')
+
+if (formulario)
+  formulario.addEventListener('submit', function (evento) {
+    evento.preventDefault()
+    evento.stopPropagation()
+
+    if (
+      nome.value.length == 0 ||
+      cidade.value.length == 0 ||
+      telefone.value.length == 0 ||
+      cep.value.length == 0 ||
+      email.value.length == 0
+    )
+      alert('Preencha todos os campos')
+    else if (
+      validaCampo(nome) &&
+      validaCampo(cidade) &&
+      validaCampoNumerico(telefone) &&
+      validaUF(uf) &&
+      validaCampoNumerico(cep) &&
+      validaEmail(email)
+    ) {
+      formulario.reset()
+      alert('Dados enviados com sucesso')
+    }
+  })
+
+/*
 let camposObrigatorios = document.querySelectorAll('input.obrigatorio')
 let camposNumericos = document.querySelectorAll('input.numero')
 let camposEmail = document.querySelectorAll('input.email')
 
 let campoUF = document.querySelectorAll('input.uf')
-
+console.log(camposEmail)
 for (let emFoco of camposObrigatorios) {
   validaCampo(emFoco)
 }
@@ -162,4 +189,4 @@ for (let emFoco of camposEmail) {
 
 for (let emFoco of campoUF) {
   validaUF(emFoco)
-}
+}*/
