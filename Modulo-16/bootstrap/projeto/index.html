@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.cc" type="image/x-icon">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/custom.css">
+    <title>Exercício bootstrap-1</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <img src="./images/logo.jpg" alt="logo">
+                    
+                   
+
+                </div>
+                <div class="col">
+                  <ul class="nav justify-content-end">
+                        <li class="nav-item"><a class= "nav-link active" href="">Home</a></li>
+                        <li class="nav-item"><a class= "nav-link" href="#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class= "nav-link" href="#produtos">Carros</a></li>
+                        <li class="nav-item"><a class= "nav-link" href="#contato">Contato</a></li>
+                    </ul>   
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-12 alin">
+                    <h2><b>Sobre nós</b></h2>
+                    <p>Com início das atividades em 2018, a Versat Veículos Importados tem um corpo de profissionais sérios e que possuem know-how de mais de duas décadas no mercado de compra e venda de veículos.
+
+                        Buscando oferecer sempre um ótimo negócio a seus clientes, traz excelentes ofertas através de um atendimento personalizado, que entende sua necessidade, e veículos periciados, com qualidade total em motor e câmbio, além de terem ótima procedência, o que garante maior confiabilidade para você.</p>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <img src="./images/carros-agencia.jpg" alt="carros-agencia" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos">
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <h2><b>Carros de Luxo</b></h2>
+
+                    <div class="card">
+                        <img src="./images/carro-1.jpg" alt="carro-1" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>SF90 Stradale</b></h5>
+                            <p class="card-text">O esportivo italiano é o mais moderno da companhia e usa tecnologia híbrida para ser o carro mais potente já produzido pela fabricante de Maranello, a pronta entrega ou aquisição por encomenda.</p>
+                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-1">Ver produto</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                            <img src="./images/carro-2.jpg" alt="carro-2" class="img-fluid">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Lamborghini Aventador LP 780-4 Ultimae</b></h5>
+                                <p class="card-text">O Aventador foi criado para antecipar o futuro, como demonstrado pelo uso de tecnologia inovadora, incluindo um motor V12 e o uso extensivo de fibra de carbono.</p>
+                                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-2">Ver produto</a>
+                            </div>
+                    </div>
+
+                    <div class="card">
+                            <img src="./images/carro-3.jpg" alt="carro-3" class="img-fluid">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Rolls-Royce Black Badge Ghost</b></h5>
+                                <p class="card-text">
+                                    Black Badge Ghost vive após o anoitecer, acendendo o rebelde interior. Poderoso, ágil e destemido, é a manifestação mais potente da Rolls-Royce até agora um impulso definido por força e sutileza implacáveis.</p>
+                                <a class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#modal-3">Ver produto</a>
+                            </div>
+                    </div>        
+
+                </div>
+            </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h2><b>Contato</b></h2>
+                    <p>Ficou interessado? Preencha os campos do formulário para receber uma cotação</p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <form class="form">
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" name=" nome" placeholder="Digite seu nome">
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" name=" nome" placeholder="Digite seu e-mail">
+                        </div>
+
+                        <div class="input-group">
+                            <textarea class="form-control" name="" rows="5"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-lg btn-success">Solicitar Cotação</button>
+
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade"id="modal-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><b>Ferrari</b></h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6><b>Confira os preços</b></h6>
+                    <table class="table table-hover table-striped">
+                        <thead>
+                           <tr>
+                            <th><b>Modelo</b></th>
+                            <th>Valor</th>
+                        </tr> 
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td><b>Standart</b></td>
+                            <td>R$ 6.400.000,00</td>
+                        </tr>
+                        <tr>
+                            <td><b>Carreira</b></td>
+                            <td>R$ 7.400.000,00</td>
+                        </tr>
+                        <tr>
+                            <td><b>Luxury</b></td>
+                            <td>R$ 8.400.000,00</td>
+                        </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade"id="modal-2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><b>Lamborghini</b></h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6><b>Confira os preços</b></h6>
+                    <table class="table table-hover table-striped">
+                        <thead>
+                           <tr>
+                            <th><b>Modelo</b></th>
+                            <th>Valor</th>
+                        </tr> 
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td><b>Charger</b></td>
+                            <td>R$ 1.700.000,00</td>
+                        </tr>
+                        <tr>
+                            <td><b>SuperCharger</b></td>
+                            <td>R$ 2.000.000,00</td>
+                        </tr>
+                        <tr>
+                            <td><b>HiperCharger</b></td>
+                            <td>R$ 2.700.000,00</td>
+                        </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade"id="modal-3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><b>Rolls-Royce</b></h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6><b>Confira os preços</b></h6>
+                    <table class="table table-hover table-striped">
+                        <thead>
+                           <tr>
+                            <th><b>Modelo</b></th>
+                            <th>Valor</th>
+                        </tr> 
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td><b>Custom Basic</b></td>
+                            <td>R$ 4.900.000,00</td>
+                        </tr>
+                        <tr>
+                            <td><b>Custom Complete</b></td>
+                            <td>R$ 5.900.000,00</td>
+                        </tr>
+                        <tr>
+                            <td><b>Custom Luxury</b></td>
+                            <td>R$ 6.900.000,00</td>
+                        </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+                    
+    
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
