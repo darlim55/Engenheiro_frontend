@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.cc" type="image/x-icon">
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/custom.css">
+    <link rel="stylesheet" href="./style/custom-form.css">
+    <title>Exercício bootstrap-1</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <img src="./images/logo.jpg" alt="logo">
+
+
+
+                </div>
+                <div class="col">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html#produtos">Carros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="cadastro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h2><b>Cadastro</b></h2>
+                    <p>Faça seu cadastro para receber nossos produtos em sua casa.</p>
+                </div> <!--fim .col-md-12-->
+            </div><!--fim .row-->
+
+            <div class="row">
+                <form class="form">
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name=" nome" placeholder="Digite seu nome"required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name=" nome" placeholder="Digite seu e-mail"required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="endereco" class="col-form-label-sm">Endereço</label>
+                                <input type="text" id="endereco" class="form-control" placeholder="Digite seu endereço"required>
+                            </div>
+
+                            <div class="col">
+                                <label for="bairro" class="col.form-label-sm">Bairro</label>
+                                <input type="text" id="bairro" class="form-control"
+                                    placeholder="Digite o bairro" required>
+                            </div>
+
+                            <div class="col">
+                                <label for="complemento" class="col.form-label-sm">Complemento</label>
+                                <input type="text" id="complemento" class="form-control"
+                                    placeholder="Digite o complemento" required>
+                            </div>
+
+                            <div class="col">
+                                <label for="telefone" class="col.form-label-sm">Telefone</label>
+                                <input type="text" id="telefone" class="form-control"
+                                    placeholder="Digite o seu telefone" required>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="cidade" class="col-form-label-sm">Cidade</label>
+                            <input type="text" name="cidade" id="cidade" class="form-control"
+                                placeholder="Digite a cidade" required>
+                        </div>
+                        <div class="col">
+                            <label for="estado" class="col-form-label-sm">Estado</label>
+                            <select name="estado" id="estado" class="form-control" required>
+                                <option value="">Selecione estado</option>
+                                <option value="ac">AC</option>
+                                <option value="al">AL</option>
+                                <option value="ap">AP</option>
+                                <option value="am">AM</option>
+                                <option value="ba">BA</option>
+                                <option value="ce">CE</option>
+                                <option value="df">DF</option>
+                                <option value="es">ES</option>
+                                <option value="go">GO</option>
+                                <option value="ma">MA</option>
+                                <option value="ms">MS</option>
+                                <option value="mg">MG</option>
+                                <option value="pa">PA</option>
+                                <option value="pb">PB</option>
+                                <option value="pr">PR</option>
+                                <option value="pe">PE</option>
+                                <option value="pi">PI</option>
+                                <option value="rj">RJ</option>
+                                <option value="rn">RN</option>
+                                <option value="rs">RS</option>
+                                <option value="ro">RO</option>
+                                <option value="rr">RR</option>
+                                <option value="sc">SC</option>
+                                <option value="sp">SP</option>
+                                <option value="se">SE</option>
+                                <option value="to">TO</option>
+
+                            </select>
+
+                        </div>
+                        <div class="col">
+                            <label for="cep" class="col-form-label-sm">CEP</label>
+                            <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite o cep"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                                <label for="info" class="col-form-label-sm">Informações Adicionais</label>
+                                <textarea class="form-control" name="info" id="info" rows="5"
+                                    placeholder="Digite informações adicionais"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="form-check">
+                                <input type="checkbox" name="promocionais" id="promocionais">
+                                <label for="promocionais" class="form-check-label col-form-label-sm">Aceito receber
+                                    mensagens promocinais</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <button type="submit" class="btn btn-lg btn-success">Realizar cadastro</button>
+
+                </form> <!--fim .form-->
+                <p> <a href="#cadastro" data-bs-toggle="modal" data-bs-target="#modal-1">Cadastre-se</a> para receber
+                    novidades</p>
+            </div> <!--fim .row-->
+        </div> <!--fim .container-->
+    </section>
+
+    <div class="modal fade" id="modal-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><b>Inscrever-me na lista</b></h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6><b>Preencha os campos para receber novidades e promoções</b></h6>
+
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="form-group col-4">
+                                <input type="text" class="form-control form-control-sm mb-2" name="nome"
+                                    placeholder="nome">
+                            </div>
+
+                            <div class="form-group col-4">
+                                <input type="text" class="form-control form-control-sm mb-2" name="e-mail"
+                                    placeholder="e-mail" required>
+                            </div>
+
+                            <div class="form-group col-4">
+                                <button type="submit" class="btn btn-sm btn-success">receber novidades</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mb-2" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./libs/bootstrap/js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

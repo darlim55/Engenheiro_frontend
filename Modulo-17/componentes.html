@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.cc" type="image/x-icon">
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="./style/custom.css">
+    <link rel="stylesheet" href="./style/custom-form.css">
+    <title>Exercício bootstrap-1</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <img src="./images/logo.jpg" alt="logo">
+
+
+
+                </div>
+                <div class="col">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html#produtos">Carros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                        collapse
+                        plugin adds the appropriate classes that we use to style each element. These classes control the
+                        overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                        this with custom CSS or overriding our default variables. It's also worth noting that just about
+                        any
+                        HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that
+                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
+                        limit
+                        overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that
+                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
+                        limit
+                        overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="ratio ratio-16x9">
+                        <img src="./images/carro-1.jpg" class="d-block w-100" alt="Ferrari">
+                    </div>
+                    <div class="carousel-caption">
+                        <h5 class="text-truncate col-12">O esportivo italiano é o mais moderno da companhia e usa
+                            tecnologia híbrida para ser o carro
+                            mais potente já produzido pela fabricante de Maranello, a pronta entrega ou aquisição por
+                            encomenda.</h5>
+                        <a class="btn btn-light stretched-link">Call to action</a>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        <img src="./images/carro-2.jpg" class="d-block w-100" alt="Lamborghini">
+                    </div>
+                    <div class="carousel-caption">
+                        <h5 class="text-truncate col-12">O Aventador foi criado para antecipar o futuro, como
+                            demonstrado pelo uso de tecnologia
+                            inovadora, incluindo um motor V12 e o uso extensivo de fibra de carbono.</h5>
+                        <a class="btn btn-light stretched-link">Call to action</a>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        <img src="./images/carro-3.jpg" class="d-block w-100" alt="Rolls-Royce">
+                    </div>
+                    <div class="carousel-caption">
+                        <h5 class="text-truncate col-12">Black Badge Ghost vive após o anoitecer, acendendo o rebelde
+                            interior. Poderoso, ágil e destemido, é a manifestação mais potente da Rolls-Royce até agora
+                            um impulso definido por força e sutileza implacáveis.</h5>
+                        <a class="btn btn-light stretched-link">Call to action</a>
+                    </div>
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="bg-info clearfix">
+            <a name="" id="" class="btn btn-link float-start fixed-top" href="#" role="button">Link</a>
+            <a name="" id="" class="btn link-danger btn-link float-start" href="#" role="button">Link</a>
+            <a name="" id="" class="btn link-warning float-start" href="#" role="button">Link</a>
+            <a name="" id="" class="btn link-dark float-start" href="#" role="button">Link</a>
+            <a name="" id="" class="btn btn-light float-start" href="#" role="button">Button</a>
+            <a name="" id="" class="btn btn-dark float-end" href="#" role="button">Button</a>
+        </div>
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-solid fa-car"></i>
+    </div>
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/02f6953104.js" crossorigin="anonymous"></script>
+    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./libs/fontawesome/js/all.min.js"></script>
+
+    <script>
+        const myCarouselElement = document.querySelector('#carouselExampleFade')
+
+        const carousel = new bootstrap.Carousel(myCarouselElement, {
+            interval: 1000
+        })
+    </script>
+
+</body>
+
+</html>
