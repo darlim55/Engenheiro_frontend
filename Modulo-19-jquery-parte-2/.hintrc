@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-aria": "off"
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off"
+      }
+    ],
+    "detect-css-reflows/layout": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "text-align: -webkit-match-parent",
+          "-webkit-text-size-adjust",
+          "scroll-behavior",
+          "-webkit-tap-highlight-color",
+          "text-decoration-skip-ink",
+          "overflow-anchor",
+          "-webkit-overflow-scrolling"
+        ]
+      }
+    ],
+    "css-prefix-order": "off",
+    "highest-available-document-mode": "off",
+    "disown-opener": "off"
+  }
+}
